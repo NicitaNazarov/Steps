@@ -1,0 +1,10 @@
+from tkinter import *
+
+def function_1 (num):
+    print (num)
+
+window = Tk()
+button = Button (window, text = 'Click me')
+button.config (command = function_1(10))
+button.pack()
+button.mainloop ()

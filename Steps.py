@@ -1,4 +1,5 @@
 import datetime as DT
+from tkinter import *
 
 STEP_M = 0.65  # Длина шага в метрах.
 
@@ -78,6 +79,7 @@ def show_message (time, steps_per_day, distance, calories, achive):
     print (f'Вы сожгли {calories:.2f} ккал .')
     print (achive)
 
+
 def watch_on (input_list):
     for i in input_list:
         steps, time = i
@@ -94,6 +96,14 @@ def watch_on (input_list):
 
     show_message (time, steps_per_day, distance, calories, message)
 
-watch_on ([(100, '9:22:12'), 
+# watch_on ([(100, '9:22:12'), 
+#               (200, '9:23:12'),
+#               (30000, '9:24:12')])
+
+window = Tk()
+button = Button (window, text = 'Включение часов')
+button.config (command=lambda: watch_on ([(100, '9:22:12'), 
               (200, '9:23:12'),
-              (30000, '9:24:12')])
+              (30000, '9:24:12')]))
+button.pack ()
+window.mainloop ()
