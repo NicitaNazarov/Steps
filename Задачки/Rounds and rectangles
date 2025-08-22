@@ -1,0 +1,12 @@
+import math
+
+FIGURES = [{'type': 'round', 'params' : [3] },
+          {'type': 'rectangle', 'params' : [3, 4] },
+          {'type': 'rectangle', 'params' : [4, 10] },
+          {'type': 'round', 'params' : [9] },
+
+]
+
+
+
+
